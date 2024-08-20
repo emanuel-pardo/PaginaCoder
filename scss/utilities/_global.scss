@@ -1,0 +1,42 @@
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "main main main main main main main main main main main main"
+        "footer footer footer footer footer footer footer footer footer footer footer footer"
+    ;
+    gap: 5px;
+    overflow: hidden;
+
+}
+
+main {
+    grid-area: main;
+    border-bottom: 2px solid rgba(210, 210, 210, 0.941);
+    margin: 3px;
+
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: green;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+
+        &:hover {
+            background-color: darkgreen;
+        }
+    }
+}

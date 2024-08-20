@@ -1,0 +1,121 @@
+@media screen and (max-width:768px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 23vh auto 40vh;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+
+    header {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+            width: 100px;
+        }
+
+        .burger {
+            display: block;
+        }
+
+        nav ul {
+            display: grid;
+            position: absolute;
+            left: 0;
+            height: 0;
+            overflow: hidden;
+            transition: .3s ease;
+            right: 10px;
+            top: 20px;
+
+            li {
+                
+                a {
+                    
+                    padding: 10px 80px;
+                }
+            }
+        }
+
+        #menuburger:checked~.lblmenu .burger {
+            display: none;
+        }
+
+        #menuburger:checked~.lblmenu .close {
+            display: block;
+
+        }
+
+        #menuburger:checked~nav ul {
+            background-color: rgb(163, 163, 163);
+            height: 10rem;
+            width: 10rem;
+            margin-top: 10%;
+            margin-left: 60%;
+        }
+    }
+
+
+    main {
+        .section-main-index {
+            h1 {
+                font-size: 18px;
+            }
+
+            h2 {
+                font-size: 13px;
+            }
+
+            .imgcentral {
+                gap: 2px;
+                width: 140vw;
+                justify-content: center;
+            }
+
+        }
+
+        .whatsapp-button {
+
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    footer {
+
+        .panel-izquierdo {
+            grid-column: auto;
+            grid-row: auto;
+            border-right: none;
+            height: 100%;
+
+            .seguinos {
+                padding-top: 20px;
+
+                h6 {
+                    font-size: 18px;
+                }
+            }
+
+            .ubicacion {
+                h6 {
+                    font-size: 18px;
+                }
+            }
+
+            h6 {
+                font-size: 18px;
+            }
+
+        }
+
+        .panel-consultas {
+            display: none;
+        }
+    }
+
+}

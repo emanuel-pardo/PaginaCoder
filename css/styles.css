@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "header header header header header header header header header header header header" "main main main main main main main main main main main main" "footer footer footer footer footer footer footer footer footer footer footer footer";
+  gap: 5px;
+  overflow: hidden;
+}
+
+main {
+  grid-area: main;
+  border-bottom: 2px solid rgba(210, 210, 210, 0.941);
+  margin: 3px;
+}
+main .whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+main .whatsapp-button img {
+  width: 50%;
+  height: 50%;
+}
+main .whatsapp-button:hover {
+  background-color: darkgreen;
+}
+
+header {
+  display: grid;
+  grid-area: header;
+  border-bottom: 2px solid rgba(210, 210, 210, 0.941);
+  margin: 3px;
+  align-items: center;
+  justify-items: center;
+}
+header .logo {
+  grid-column: 4/7;
+  width: 15vw;
+}
+header a {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  border: none;
+  background-color: white;
+  color: #2c88d9;
+}
+header #menuburger {
+  display: none;
+}
+header .lblmenu {
+  align-content: center;
+}
+header .burger {
+  font-size: 2.8rem;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+header .close {
+  font-size: 2.8rem;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+header nav {
+  grid-column: 2/10;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-right: 100px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li {
+  margin: 1%;
+  border-radius: 5rem;
+  text-align: center;
+  border: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+header nav ul li a:hover {
+  background-color: #2c88d9;
+  color: white;
+}
+
+.section-main-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5px;
+  /* .cards {
+      grid-column: auto;
+      display: flex;
+  } */
+}
+.section-main-index h1 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  margin: 0;
+  color: darkslategrey;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vw;
+  text-align: center;
+}
+.section-main-index h2 {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  margin: 0;
+  color: darkslategrey;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  padding-bottom: 1%;
+  text-align: center;
+}
+.section-main-index .content-imagen {
+  border-top: 2px solid rgba(210, 210, 210, 0.941);
+  padding-top: 2px;
+}
+.section-main-index .content-imagen .imgcentral {
+  width: 100%;
+}
+
+.section-empresa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5px;
+}
+.section-empresa .texto-empresa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  margin: 0;
+  color: darkslategrey;
+  align-items: center;
+  justify-content: center;
+}
+.section-empresa .imagen-empresa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 50px;
+}
+.section-empresa .imagen-empresa img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.section-productos .content-volver {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+  width: 100%;
+}
+.section-productos .content-volver .volver-inicio {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 16px;
+  text-align: center;
+}
+
+.section-contacto .content-volver {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+  width: 100%;
+}
+.section-contacto .content-volver .volver-inicio {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 16px;
+  text-align: center;
+}
+
+.section-colores .content-volver {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+  width: 100%;
+}
+.section-colores .content-volver .volver-inicio {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 16px;
+  text-align: center;
+}
+
+footer {
+  display: grid;
+  grid-area: footer;
+  background-color: #f1f1f1;
+  grid-template-rows: auto;
+  gap: 15px;
+}
+footer .panel-izquierdo {
+  grid-row: 2/4;
+  grid-column: 3/7;
+  text-align: center;
+  align-items: center;
+  border-right: 3px solid rgba(210, 210, 210, 0.941);
+}
+footer .panel-izquierdo .logos-redes {
+  padding: 5%;
+}
+footer .panel-izquierdo .seguinos {
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 30px;
+  color: darkslategrey;
+}
+footer .panel-izquierdo .seguinos h6 {
+  font-size: 1.5vw;
+}
+footer .panel-izquierdo .ubicacion {
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 30px;
+  color: darkslategrey;
+}
+footer .panel-izquierdo .ubicacion h6 {
+  font-size: 1.5vw;
+}
+footer .panel-izquierdo .ubicacion iframe {
+  width: 250px;
+  height: 150px;
+  padding: 5%;
+}
+footer .panel-izquierdo .copyright {
+  text-transform: uppercase;
+}
+footer .panel-consultas {
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 30px;
+  color: darkslategrey;
+  grid-column: 9/12;
+  grid-row: 2/5;
+}
+footer .panel-consultas h6 {
+  font-size: 1.5vw;
+  width: 60%;
+  text-align: center;
+}
+footer .panel-consultas .contenedor-texto {
+  display: flex;
+  gap: 5px;
+}
+footer .panel-consultas .contenedor-texto .textboxes-demas {
+  display: grid;
+  width: 170px;
+  height: 100%;
+}
+footer .panel-consultas .contenedor-texto .textboxes-demas input {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  text-transform: uppercase;
+  font-size: 10px;
+  width: 100%;
+  height: 75%;
+}
+footer .panel-consultas .contenedor-texto .textbox-mensaje textarea {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-top: 14px;
+  height: 124px;
+  width: 30vw;
+  resize: none;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 23vh auto 40vh;
+    grid-template-areas: "header" "main" "footer";
+  }
+  header {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  header .logo {
+    width: 100px;
+  }
+  header .burger {
+    display: block;
+  }
+  header nav ul {
+    display: grid;
+    position: absolute;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    right: 10px;
+    top: 20px;
+  }
+  header nav ul li a {
+    padding: 10px 80px;
+  }
+  header #menuburger:checked ~ .lblmenu .burger {
+    display: none;
+  }
+  header #menuburger:checked ~ .lblmenu .close {
+    display: block;
+  }
+  header #menuburger:checked ~ nav ul {
+    background-color: rgb(163, 163, 163);
+    height: 10rem;
+    width: 10rem;
+    margin-top: 10%;
+    margin-left: 60%;
+  }
+  main .section-main-index h1 {
+    font-size: 18px;
+  }
+  main .section-main-index h2 {
+    font-size: 13px;
+  }
+  main .section-main-index .imgcentral {
+    gap: 2px;
+    width: 140vw;
+    justify-content: center;
+  }
+  main .whatsapp-button {
+    width: 40px;
+    height: 40px;
+  }
+  footer .panel-izquierdo {
+    grid-column: auto;
+    grid-row: auto;
+    border-right: none;
+    height: 100%;
+  }
+  footer .panel-izquierdo .seguinos {
+    padding-top: 20px;
+  }
+  footer .panel-izquierdo .seguinos h6 {
+    font-size: 18px;
+  }
+  footer .panel-izquierdo .ubicacion h6 {
+    font-size: 18px;
+  }
+  footer .panel-izquierdo h6 {
+    font-size: 18px;
+  }
+  footer .panel-consultas {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

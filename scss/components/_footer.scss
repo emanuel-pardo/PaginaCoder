@@ -1,0 +1,137 @@
+footer {
+    display: grid;
+    grid-area: footer;    
+    background-color: #f1f1f1;
+    grid-template-rows: auto;
+    gap: 15px;
+    
+    .panel-izquierdo {
+        grid-row: 2/4;
+        grid-column: 3/7;
+        text-align: center;
+        align-items: center;
+        border-right: 3px solid rgba(210, 210, 210, 0.941);
+
+        .logos-redes {
+            padding: 5%;
+        }
+
+        .seguinos {
+            text-transform: uppercase;
+            font-family: "Noto Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+            font-size: 30px;
+
+            color: darkslategrey;
+
+            h6 {
+                font-size: 1.5vw;
+            }
+
+
+        }
+
+        .ubicacion {
+            text-transform: uppercase;
+            font-family: "Noto Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+            font-size: 30px;
+
+            color: darkslategrey;
+
+            h6 {
+                font-size: 1.5vw;
+            }
+
+            iframe {
+                width: 250px;
+                height: 150px;
+                padding: 5%;
+            }
+
+        }
+
+        .copyright {
+            text-transform: uppercase;
+        }
+
+
+
+    }
+
+    .panel-consultas {
+
+        text-transform: uppercase;
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+        font-size: 30px;
+        color: darkslategrey;
+
+        grid-column: 9/12;
+        grid-row: 2/5;
+
+        h6 {
+            font-size: 1.5vw;
+            width: 60%;
+            text-align: center;
+        }
+
+        .contenedor-texto {
+            display: flex;
+            gap: 5px;
+
+            .textboxes-demas {
+                display: grid;
+                width: 170px;
+                height: 100%;
+
+                input {
+
+                    font-family: "Noto Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-variation-settings:
+                        "wdth" 100;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    width: 100%;
+                    height: 75%;
+                }
+            }
+
+            .textbox-mensaje {
+                textarea {
+                    font-family: "Noto Sans", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-variation-settings:
+                        "wdth" 100;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    margin-top: 14px;
+                    height: 124px;
+                    width: 30vw;
+                    resize: none;
+                }
+
+            }
+
+        }
+
+
+    }
+}

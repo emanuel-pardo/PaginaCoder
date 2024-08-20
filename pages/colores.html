@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -30,7 +31,7 @@
             <input type="checkbox" name="menu" id="menuburger">
             <label for="menuburger" class="lblmenu">
                 <img src="../img/burger-bar.png" alt="burger" class="burger">
-                <img src="../img/cancel.png" alt="close" class="close">       
+                <img src="../img/cancel.png" alt="close" class="close">
             </label>
             <nav>
                 <ul>
@@ -53,17 +54,14 @@
             </nav>
         </header>
         <main>
-            <section>
+            <section class="section-colores">
                 <div class="content-volver">
-                <a class="volver-inicio" href="../index.html">Volver a Inicio</a>
-                
-                <div>
-                    <a href="https://wa.me/5491153076827" class="whatsapp-button">
-                        <img src="../img/whatsapp.png" alt="WhatsApp">
-                    </a>
+                    <a class="volver-inicio" href="../index.html">Volver a Inicio</a>
                 </div>
-            </div>           
             </section>
+            <a href="https://wa.me/5491153076827" class="whatsapp-button">
+                <img src="../img/whatsapp.png" alt="WhatsApp">
+            </a>
         </main>
 
         <footer>
@@ -106,16 +104,18 @@
                         <textarea placeholder="Mensaje"></textarea>
                     </div>
                 </div>
-                <button onclick="enviar()" type="button" class="btn btn-success btn-md">Consultar</button>               
+                <button onclick="enviar()" type="button" class="btn btn-success btn-md">Consultar</button>
             </div>
         </footer>
     </div>
     <script lang="js">
-        function enviar(){
+        function enviar() {
             alert("enviado");
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
