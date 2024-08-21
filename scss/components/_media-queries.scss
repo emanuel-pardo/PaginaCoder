@@ -63,11 +63,11 @@
     main {
         .section-main-index {
             h1 {
-                font-size: 18px;
+                font-size: $fontsize-h6-mq;
             }
 
             h2 {
-                font-size: 13px;
+                font-size: $fontsize-h6-mq;
             }
 
             .imgcentral {
@@ -97,18 +97,18 @@
                 padding-top: 20px;
 
                 h6 {
-                    font-size: 18px;
+                    font-size: $fontsize-h6-mq;
                 }
             }
 
             .ubicacion {
                 h6 {
-                    font-size: 18px;
+                    font-size: $fontsize-h6-mq;
                 }
             }
 
             h6 {
-                font-size: 18px;
+                font-size: $fontsize-h6-mq;
             }
 
         }

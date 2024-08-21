@@ -11,10 +11,18 @@
     overflow: hidden;
 
 }
+header{
+    display: grid;
+    grid-area: header;
+    border-bottom: $borde-gris;
+    margin: 3px;
+    align-items: center;
+    justify-items: center;
+}
 
 main {
     grid-area: main;
-    border-bottom: 2px solid rgba(210, 210, 210, 0.941);
+    border-bottom: $borde-gris;
     margin: 3px;
 
     .whatsapp-button {
@@ -25,9 +33,9 @@ main {
         height: 60px;
         background-color: green;
         border-radius: 50%;
-        display: flex;
+        @include flex(inherit,center);
+        
         align-items: center;
-        justify-content: center;
         z-index: 100;
 
         img {
@@ -39,4 +47,13 @@ main {
             background-color: darkgreen;
         }
     }
+}
+
+footer{
+    display: grid;
+    grid-area: footer;    
+    background-color: #f1f1f1;
+    grid-template-rows: auto;
+    gap: 15px;
+    
 }

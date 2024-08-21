@@ -1,38 +1,19 @@
 header {
-    display: grid;
-    grid-area: header;
-    border-bottom: 2px solid rgba(210, 210, 210, 0.941);
-    margin: 3px;
-    align-items: center;
-    justify-items: center;
+
 
     .logo {
         grid-column: 4/7;
         width: 15vw;
+        @include escala-hover(1.1, 0.5s);
 
 
     }
 
     a {
-        font-family: "Roboto Flex", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 200;
-        font-style: normal;
-        font-variation-settings:
-            "slnt" 0,
-            "wdth" 100,
-            "GRAD" 0,
-            "XOPQ" 96,
-            "XTRA" 468,
-            "YOPQ" 79,
-            "YTAS" 750,
-            "YTDE" -203,
-            "YTFI" 738,
-            "YTLC" 514,
-            "YTUC" 712;
+        @extend %letras-robotoflex;
         border: none;
         background-color: white;
-        color: #2c88d9;
+        color: $color-nav-a;
 
 
 
@@ -74,8 +55,7 @@ header {
 
         ul {
             list-style: none;
-            display: flex;
-            justify-content: center;
+            @include flex(inherit,center);
 
             li {
                 margin: 1%;
@@ -89,7 +69,7 @@ header {
                     border-radius: 3px;
 
                     &:hover {
-                        background-color: #2c88d9;
+                        background-color: $color-nav-a;
                         color: white;
                     }
                 }

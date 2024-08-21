@@ -1,26 +1,23 @@
-.section-contacto {
-    .content-volver {
-        display: flex;
-        justify-content: center;
-        margin: 5% 0;
-        width: 100%;
+main {
+    .section-contacto {
+        .content-volver {
+            @include flex(inherit,center);
+            margin: 5% 0;
+            width: 100%;
 
-        .volver-inicio {
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: blue;
-            color: white;
-            border-radius: 5px;
-            font-family: "Noto Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-            font-variation-settings:
-                "wdth" 100;
-            font-size: 16px;
-            text-align: center;
+            .volver-inicio {
+                @extend %letras-notosans-normal;
+                text-decoration: none;
+                padding: 10px 20px;
+                background-color: blue;
+                color: white;
+                border-radius: 5px;
+            
+                font-size: 16px;
+                text-align: center;
+            }
         }
+
+
     }
-
-
 }
