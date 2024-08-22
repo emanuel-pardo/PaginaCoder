@@ -1,23 +1,32 @@
 main {
-    .section-contacto {
-        .content-volver {
-            @include flex(inherit,center);
-            margin: 5% 0;
-            width: 100%;
 
-            .volver-inicio {
-                @extend %letras-notosans-normal;
-                text-decoration: none;
-                padding: 10px 20px;
-                background-color: blue;
-                color: white;
-                border-radius: 5px;
+
+    .section-contacto {
+        @extend %sections-autofit;
+
+
+        .texto-contacto {
+            @extend %letras-notosans-normal;
+            @include flex(column,center);
             
-                font-size: 16px;
-                text-align: center;
-            }
+            
+            height: 100%;
+            width: 100%;
+            padding: 50px;
+            margin: 0;
+            color: $color-titulos;
+         
         }
 
+        .mapa-contacto {
+            @include flex(column,center);
+            align-items: center;            
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            padding: 10px;
 
+           
+        }
     }
 }

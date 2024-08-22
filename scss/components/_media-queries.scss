@@ -61,6 +61,10 @@
 
 
     main {
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+        }
         .section-main-index {
             h1 {
                 font-size: $fontsize-h6-mq;
@@ -118,4 +122,14 @@
         }
     }
 
+}
+
+@media screen and (max-width:1001px) {
+    main {
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: none;
+            
+        }
+    }
 }

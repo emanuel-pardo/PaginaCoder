@@ -1,25 +1,37 @@
 main {
-
-
     .section-colores {
-        .content-volver {
-            @include flex(inherit,center);
-            margin: 5% 0;
-            width: 100%;
+     
 
-            .volver-inicio {
-                @extend %letras-notosans-normal;
-                text-decoration: none;
-                padding: 10px 20px;
-                background-color: blue;
-                color: white;
-                border-radius: 5px;
-            
-                font-size: 16px;
-                text-align: center;
-            }
-        }
-
-
+      h1 {
+        @extend %letras-notosans-normal;
+        margin: 12px;
+        color: $color-titulos;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5vw;
+        text-align: center;
     }
-}
+      .carousel-inner {
+        img {
+          max-width: 800px;  // Ajusta el tamaño máximo de ancho de las imágenes
+          max-height: 1200px; // Ajusta el tamaño máximo de alto de las imágenes
+          width: auto;       // Mantiene la proporción de la imagen
+          height: auto;      // Mantiene la proporción de la imagen
+          margin: 0 auto;    // Centra la imagen horizontalmente
+        }
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 10px;             
+        background-color: blue; 
+        top: 50%;               
+        transform: translateY(-50%);  
+        &.carousel-control-prev {
+          left: calc(50% - 400px); 
+        }
+        &.carousel-control-next {
+          right: calc(50% - 400px); 
+        }
+      }
+    }
+  }

@@ -13,7 +13,7 @@ footer .panel-consultas .contenedor-texto .textbox-mensaje textarea, footer .pan
   text-transform: uppercase;
 }
 
-main .section-colores .content-volver .volver-inicio, main .section-contacto .content-volver .volver-inicio, main .section-productos .content-volver .volver-inicio, main .section-empresa .texto-empresa, main .section-main-index h2, main .section-main-index h1 {
+main .section-colores h1, main .section-contacto .texto-contacto, main .section-productos h1, main .section-empresa .texto-empresa, main .section-main-index h2, main .section-main-index h1 {
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -29,7 +29,7 @@ header a {
   font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
 }
 
-main .section-empresa, main .section-main-index {
+main .section-contacto, main .section-empresa, main .section-main-index {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 5px;
@@ -217,55 +217,70 @@ main .section-empresa .imagen-empresa img {
   object-fit: cover;
 }
 
-main .section-productos .content-volver {
-  display: flex;
-  flex-direction: inherit;
+main .section-productos h1 {
+  margin: 12px;
+  color: rgb(60, 103, 103);
+  align-items: center;
   justify-content: center;
-  margin: 5% 0;
-  width: 100%;
-}
-main .section-productos .content-volver .volver-inicio {
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: blue;
-  color: white;
-  border-radius: 5px;
-  font-size: 16px;
+  font-size: 2.5vw;
   text-align: center;
+}
+main .section-productos .card-img-top {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
 }
 
-main .section-contacto .content-volver {
+main .section-contacto .texto-contacto {
   display: flex;
-  flex-direction: inherit;
+  flex-direction: column;
   justify-content: center;
-  margin: 5% 0;
+  height: 100%;
   width: 100%;
+  padding: 50px;
+  margin: 0;
+  color: rgb(60, 103, 103);
 }
-main .section-contacto .content-volver .volver-inicio {
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: blue;
-  color: white;
-  border-radius: 5px;
-  font-size: 16px;
+main .section-contacto .mapa-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
 }
 
-main .section-colores .content-volver {
-  display: flex;
-  flex-direction: inherit;
+main .section-colores h1 {
+  margin: 12px;
+  color: rgb(60, 103, 103);
+  align-items: center;
   justify-content: center;
-  margin: 5% 0;
-  width: 100%;
-}
-main .section-colores .content-volver .volver-inicio {
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: blue;
-  color: white;
-  border-radius: 5px;
-  font-size: 16px;
+  font-size: 2.5vw;
   text-align: center;
+}
+main .section-colores .carousel-inner img {
+  max-width: 800px;
+  max-height: 1200px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+main .section-colores .carousel-control-prev,
+main .section-colores .carousel-control-next {
+  width: 10px;
+  background-color: blue;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .section-colores .carousel-control-prev.carousel-control-prev,
+main .section-colores .carousel-control-next.carousel-control-prev {
+  left: calc(50% - 400px);
+}
+main .section-colores .carousel-control-prev.carousel-control-next,
+main .section-colores .carousel-control-next.carousel-control-next {
+  right: calc(50% - 400px);
 }
 
 footer .panel-izquierdo {
@@ -385,6 +400,10 @@ footer .panel-consultas .contenedor-texto .textbox-mensaje textarea {
     margin-top: 10%;
     margin-left: 60%;
   }
+  main .carousel-control-prev,
+  main .carousel-control-next {
+    display: none;
+  }
   main .section-main-index h1 {
     font-size: 18px;
   }
@@ -419,6 +438,12 @@ footer .panel-consultas .contenedor-texto .textbox-mensaje textarea {
     font-size: 18px;
   }
   footer .panel-consultas {
+    display: none;
+  }
+}
+@media screen and (max-width: 1001px) {
+  main .carousel-control-prev,
+  main .carousel-control-next {
     display: none;
   }
 }
