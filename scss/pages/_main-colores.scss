@@ -1,37 +1,45 @@
 main {
-    .section-colores {
-     
+  .section-colores {
 
-      h1 {
-        @extend %letras-notosans-normal;
-        margin: 12px;
-        color: $color-titulos;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.5vw;
-        text-align: center;
+
+    h1 {
+      @extend %letras-notosans-normal;
+      margin: 12px;
+      color: $color-titulos;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5vw;
+      text-align: center;
     }
-      .carousel-inner {
-        img {
-          max-width: 800px;  // Ajusta el tamaño máximo de ancho de las imágenes
-          max-height: 1200px; // Ajusta el tamaño máximo de alto de las imágenes
-          width: auto;       // Mantiene la proporción de la imagen
-          height: auto;      // Mantiene la proporción de la imagen
-          margin: 0 auto;    // Centra la imagen horizontalmente
-        }
+
+    .carousel-inner {
+      width: 800px;
+      height: 1200px;
+      margin: 0 auto;
+      margin-bottom: 3px;
+      overflow: hidden;
+
+      img {
+        width: 800px;
+        height: 1200px;
+        object-fit: cover;
       }
-      .carousel-control-prev,
-      .carousel-control-next {
-        width: 10px;             
-        background-color: blue; 
-        top: 50%;               
-        transform: translateY(-50%);  
-        &.carousel-control-prev {
-          left: calc(50% - 400px); 
-        }
-        &.carousel-control-next {
-          right: calc(50% - 400px); 
-        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 30px;
+      background-color: $color-nav-a;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &.carousel-control-prev {
+        left: calc(50% - 400px);
+      }
+
+      &.carousel-control-next {
+        right: calc(50% - 400px);
       }
     }
   }
+}

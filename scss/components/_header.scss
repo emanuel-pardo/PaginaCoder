@@ -1,12 +1,14 @@
 header {
 
-
-    .logo {
+    .link-logo {
         grid-column: 4/7;
-        width: 15vw;
-        @include escala-hover(1.1, 0.5s);
+        .logo {
+           
+            width: 15vw;
+            @include escala-hover(1.1, 0.5s);
 
 
+        }
     }
 
     a {
@@ -55,7 +57,7 @@ header {
 
         ul {
             list-style: none;
-            @include flex(inherit,center);
+            @include flex(inherit, center);
 
             li {
                 margin: 1%;

@@ -88,12 +88,14 @@ footer {
   gap: 15px;
 }
 
-header .logo {
+header .link-logo {
   grid-column: 4/7;
+}
+header .link-logo .logo {
   width: 15vw;
   transition: transform 0.5s ease-in-out;
 }
-header .logo:hover {
+header .link-logo .logo:hover {
   transform: scale(1.1);
 }
 header a {
@@ -260,17 +262,22 @@ main .section-colores h1 {
   font-size: 2.5vw;
   text-align: center;
 }
-main .section-colores .carousel-inner img {
-  max-width: 800px;
-  max-height: 1200px;
-  width: auto;
-  height: auto;
+main .section-colores .carousel-inner {
+  width: 800px;
+  height: 1200px;
   margin: 0 auto;
+  margin-bottom: 3px;
+  overflow: hidden;
+}
+main .section-colores .carousel-inner img {
+  width: 800px;
+  height: 1200px;
+  object-fit: cover;
 }
 main .section-colores .carousel-control-prev,
 main .section-colores .carousel-control-next {
-  width: 10px;
-  background-color: blue;
+  width: 30px;
+  background-color: hsl(208, 86%, 28%);
   top: 50%;
   transform: translateY(-50%);
 }
@@ -368,7 +375,7 @@ footer .panel-consultas .contenedor-texto .textbox-mensaje textarea {
     justify-content: center;
     align-items: center;
   }
-  header .logo {
+  header .link-logo .logo {
     width: 100px;
   }
   header .burger {
@@ -400,8 +407,17 @@ footer .panel-consultas .contenedor-texto .textbox-mensaje textarea {
     margin-top: 10%;
     margin-left: 60%;
   }
-  main .carousel-control-prev,
-  main .carousel-control-next {
+  main .section-colores .carousel-inner {
+    width: 100%;
+    height: 140vw;
+    margin: auto;
+  }
+  main .section-colores .carousel-inner img {
+    width: auto;
+    height: 140vw;
+  }
+  main .section-colores .carousel-control-prev,
+  main .section-colores .carousel-control-next {
     display: none;
   }
   main .section-main-index h1 {
@@ -441,7 +457,7 @@ footer .panel-consultas .contenedor-texto .textbox-mensaje textarea {
     display: none;
   }
 }
-@media screen and (max-width: 1001px) {
+@media screen and (max-width: 800px) {
   main .carousel-control-prev,
   main .carousel-control-next {
     display: none;
